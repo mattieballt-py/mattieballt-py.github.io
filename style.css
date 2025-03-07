@@ -5,9 +5,8 @@ p:first-of-type{
 
 /* Default Light Mode */
 body {
-    background-color: white;
+    background-color: rgb(255, 217, 167);
     color: black;
-    transition: background 0.3s, color 0.3s;
 }
 
 h1 {
