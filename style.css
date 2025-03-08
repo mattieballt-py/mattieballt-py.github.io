@@ -40,6 +40,7 @@ header {
     flex-direction: column;
     align-items: center; 
     text-align: left;
+    padding-left: 15px;
     padding-top: 20px;
 }
 
@@ -51,9 +52,10 @@ header {
 
 #support {
     background-color: #828282;
-    width: 140px;
-    height: 50px;
+    width: 90px;
+    height: 30px;
     padding: 10px;
+
 }
 
 .nav-link {
