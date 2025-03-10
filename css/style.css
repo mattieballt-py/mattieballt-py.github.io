@@ -1,12 +1,25 @@
 
 /* Default Light Mode */
 body {
-    background-color: rgb(255, 217, 167);
+    background-color: rgb(255, 255, 255);
     color: black;
 }
 
 h1 {
     font-size: 2em;
+}
+
+.bare {
+    font-size: 18px;
+    font-style: italic;
+    color: #ff5733; /* Nice eye-catching orange */
+    text-align: center;
+    background-color: #fff3cd; /* Light yellow warning-style background */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ffa502;
+    display: inline-block;
+    margin-top: 5px;
 }
 
 header {
@@ -68,6 +81,25 @@ header {
 
 .nav-link:hover {
     background-color: #444;
+}
+
+/* Main Section */
+#start_ups {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.s { font-size: 20px; }
+.t1 { font-size: 24px; }
+.a { font-size: 28px; }
+.r { font-size: 32px; }
+.t2 { font-size: 36px; }
+.ups { font-size: 36px; }
+
+#start_ups p {
+    font-style: italic;
 }
 
 /* Dark Mode */
