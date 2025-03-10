@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mattie’s Engineering Portfolio</title>
-    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/who.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <h1 class="centre">Mattie</h1>
@@ -25,6 +25,28 @@
 
     <!-- Main Content -->
     <main id="main-doc">
+        <section class="Hi" id="intro">
+            <div class="container">
+                <div class="left">
+                    <h2>Mattie Ball</h2>
+                    <p> Engineer | Maker of things</p>
+                    <p>I've worked with top companies to integrate AI-driven solutions, automate workflows, and optimize branding strategies.</p>
+                    <a href="../AssetsImgs/MattieB_CV1_Eng_04.pdf" class="btn" download>Download My CV</a>
+                </div>
+                <h3>Journey so far:</h3>
+            <div class="logo-grid">
+                <img src="../AssetsLogos/Red_Bull_Powertrains_(RBPT)_logo.jpg" alt="Red Bull Powertrains Logo">
+                <img src="../AssetsLogos/Imperial_logow.png" alt="Imperial College London Logo">
+                <p>Start Ups:</p>
+                <img src="../AssetsLogos/PathfinderLogo.png" alt="Company 3">
+                <img src="logo4.png" alt="Company 4">
+                <img src="logo5.png" alt="Company 5">
+            </div>
+                <div class="right">
+                    <img src="your-photo.jpg" alt="Your Name">
+                </div>
+            </div>
+        </section>
         <section class="main-section" id="FemTech_Migraine_Headband">
             <header>FemTech Migraine Headband</header>
             <p>During my placement at Red Bull Formula One, I designed and released over 20 precision tooling components.</p>
@@ -86,6 +108,16 @@
             </header>
             <p>It's tremenously exciting to see the change start ups can bring. Pushing innovation and solving problems in new ways.</p>
         </section>
+
+        <!-- Awards Icons -->
+        <div class="award-widget">
+            <img src="../AssetsLogos/Imperial_logo.png" alt="Awards" class="award-icon" onclick="toggleAwards()">
+        </div>
+        <script>
+            function toggleAwards() {
+                document.getElementById("awardsPopup").classList.toggle("show");
+            }
+        </script>
     </main>
 </body>
 </html>

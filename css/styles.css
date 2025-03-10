@@ -1,0 +1,343 @@
+
+/* Default Light Mode */
+body {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+* {
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.logo {
+    width: 10px;
+    height: 20px;
+}
+
+.bare {
+    font-size: 18px;
+    font-style: italic;
+    color: #ff5733; /* Nice eye-catching orange */
+    text-align: center;
+    background-color: #fff3cd; /* Light yellow warning-style background */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ffa502;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+header {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.centre { 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
+
+#main-doc {
+    margin-left: 250px; 
+    padding: 20px;
+    margin-top: 0px;
+}
+
+/* Navbar */
+#navbar {
+    width: 220px; 
+    height: 100vh; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+.nav-header {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#support {
+    background-color: #828282;
+    width: 90px;
+    height: 30px;
+    padding: 10px;
+
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    width: 100%;
+}
+
+.nav-link:hover {
+    background-color: #444;
+}
+
+/* Main Section */
+#start_ups {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.s { font-size: 20px; }
+.t1 { font-size: 24px; }
+.a { font-size: 28px; }
+.r { font-size: 32px; }
+.t2 { font-size: 36px; }
+.ups { font-size: 36px; }
+
+#start_ups p {
+    font-style: italic;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode #navbar {
+    background-color: #333;
+}
+
+.dark-mode .nav-link {
+    color: #ddd;
+}
+
+/* Dark Mode Button */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px; 
+    right: 10px; 
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #666;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        text-align: center;
+    }
+
+    #main-doc {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .nav-link {
+        display: inline-block;
+        padding: 10px;
+    }
+}
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #0d0d0d, #1a1a1a);
+    color: white;
+    text-align: center;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: #b607fc;
+    color: white;
+}
+
+.btn.secondary {
+    border: 2px solid #b607fc;
+    color: #b607fc;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+    max-width: 600px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons .btn {
+    margin: 10px;
+}
+
+
+/* Awards */
+/* Floating Award Icon */
+.award-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.award-icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.award-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Awards Popup */
+.awards-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    display: none;
+    text-align: center;
+}
+
+.awards-popup.show {
+    display: block;
+}
+
+/* Awards Grid */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.awards-grid img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.awards-grid img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+

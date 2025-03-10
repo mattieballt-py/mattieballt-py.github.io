@@ -5,6 +5,10 @@ body {
     color: black;
 }
 
+* {
+    font-family: 'Roboto Mono', monospace;
+}
+
 h1 {
     font-size: 2em;
 }

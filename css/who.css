@@ -1,0 +1,159 @@
+
+/* Default Dark Mode */
+body {
+    background-color: #7a7a7a;
+    color: white;
+}
+
+* {
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.bare {
+    font-size: 18px;
+    font-style: italic;
+    color: #ff5733; /* Nice eye-catching orange */
+    text-align: center;
+    background-color: #fff3cd; /* Light yellow warning-style background */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ffa502;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+header {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.centre { 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
+
+#main-doc {
+    margin-left: 250px; 
+    padding: 20px;
+    margin-top: 0px;
+}
+
+/* Navbar */
+#navbar {
+    width: 220px; 
+    height: 100vh; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+.nav-header {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#support {
+    background-color: #828282;
+    width: 90px;
+    height: 30px;
+    padding: 10px;
+
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    width: 100%;
+}
+
+.nav-link:hover {
+    background-color: #444;
+}
+
+/* Main Section */
+#start_ups {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.s { font-size: 20px; }
+.t1 { font-size: 24px; }
+.a { font-size: 28px; }
+.r { font-size: 32px; }
+.t2 { font-size: 36px; }
+.ups { font-size: 36px; }
+
+#start_ups p {
+    font-style: italic;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode #navbar {
+    background-color: #333;
+}
+
+.dark-mode .nav-link {
+    color: #ddd;
+}
+
+/* Dark Mode Button */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px; 
+    right: 10px; 
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #666;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        text-align: center;
+    }
+
+    #main-doc {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .nav-link {
+        display: inline-block;
+        padding: 10px;
+    }
+}
