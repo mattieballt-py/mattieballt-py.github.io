@@ -171,3 +171,25 @@ header {
         padding: 10px;
     }
 }
+
+/* Glowing Scrollbar */
+::-webkit-scrollbar {
+    width: 6px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #222; /* Dark track background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff9800, #ff5722); /* Orange gradient */
+    border-radius: 6px;
+    box-shadow: 0 0 120px rgba(255, 140, 0, 0.8); /* Glowing effect */
+    max-height: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff5722, #ff9800);
+    box-shadow: 0 0 155px rgba(255, 69, 0, 1); /* Brighter glow on hover */
+}
+
