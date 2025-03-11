@@ -138,6 +138,20 @@ header {
     background-color: #666;
 }
 
+
+.bare {
+    font-size: 18px;
+    font-style: italic;
+    color: #ff5733; /* Nice eye-catching orange */
+    text-align: center;
+    background-color: #fff3cd; /* Light yellow warning-style background */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ffa502;
+    display: inline-block;
+    margin-top: 5px;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     #navbar {

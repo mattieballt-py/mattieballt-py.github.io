@@ -1,9 +1,10 @@
 
-/* Default Light Mode */
+/* 
 body {
     background-color: rgb(255, 255, 255);
     color: black;
 }
+Default Light Mode */
 
 * {
     font-family: 'Roboto Mono', monospace;
@@ -11,8 +12,15 @@ body {
 
 h1 {
     font-size: 2em;
+    font-family: 'Roboto Mono', monospace;
 }
 
+.motto {
+    font-size: 1em;
+    font-family: 'Roboto Mono', monospace;
+    font-style: italic;
+
+}
 .logo {
     width: 10px;
     height: 20px;

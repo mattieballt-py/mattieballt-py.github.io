@@ -1,7 +1,7 @@
 
 /* Default Dark Mode */
 body {
-    background-color: #7a7a7a;
+    background-color: #000000;
     color: white;
 }
 
@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.4em;
 }
 
 .bare {
@@ -26,6 +26,9 @@ h1 {
     margin-top: 5px;
 }
 
+.cv {
+    color: white;
+}
 header {
     font-weight: bold;
     font-size: 1.5em;
@@ -134,6 +137,21 @@ header {
     font-size: 14px;
 }
 
+.rb {
+    height: 40px;
+    width: 100px;
+}
+
+.imp {
+    height: 40px;
+    width: 280px;
+}
+
+.pathfind {
+    height: 40px;
+    width: 160px;
+}
+
 #dark-mode-toggle:hover {
     background-color: #666;
 }
@@ -156,4 +174,63 @@ header {
         display: inline-block;
         padding: 10px;
     }
+}
+
+
+/* Awards */
+/* Floating Award Icon */
+.award-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.award-icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.award-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Awards Popup */
+.awards-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    display: none;
+    text-align: center;
+}
+
+.awards-popup.show {
+    display: block;
+}
+
+/* Awards Grid */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.awards-grid img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.awards-grid img:hover {
+    transform: scale(1.1);
 }
