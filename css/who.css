@@ -13,17 +13,24 @@ h1 {
     font-size: 2.4em;
 }
 
-.bare {
+p:first-of-type {
     font-size: 18px;
-    font-style: italic;
-    color: #ff5733; /* Nice eye-catching orange */
-    text-align: center;
-    background-color: #fff3cd; /* Light yellow warning-style background */
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ffa502;
-    display: inline-block;
-    margin-top: 5px;
+}
+.abouttext {
+    display: flex;
+    align-items: center; /* Aligns text and image */
+    justify-content: space-between;
+}
+
+
+.me {
+    position: flex;
+    flex-direction: right;
+    width: 150px;
+    height: auto;
+    float: right;
+    margin-left: 20px;
+    border-radius: 8px;
 }
 
 .cv {
@@ -42,198 +49,127 @@ header {
 }
 
 #main-doc {
-    margin-left: 250px; 
     padding: 20px;
     margin-top: 0px;
 }
 
-/* Navbar */
-#navbar {
-    width: 220px; 
-    height: 100vh; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #1e1e1e;
-    color: white;
+/* Grid Layout */
+.portfolio-grid {
     display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: left;
-    padding-left: 15px;
-    padding-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.nav-header {
+/* Portfolio Items */
+.portfolio-item {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Images */
+.portfolio-item img {
     width: 100%;
-    text-align: center;
-    padding: 10px 0;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
-#support {
-    background-color: #828282;
-    width: 90px;
-    height: 30px;
-    padding: 10px;
-
+/* Hover Effect - Image Zoom */
+.portfolio-item:hover img {
+    transform: scale(1.1);
 }
 
-.nav-link {
+/* Overlay Effect */
+.overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
     color: white;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    width: 100%;
-}
-
-.nav-link:hover {
-    background-color: #444;
-}
-
-/* Main Section */
-#start_ups {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 3px;
-}
-.s { font-size: 20px; }
-.t1 { font-size: 24px; }
-.a { font-size: 28px; }
-.r { font-size: 32px; }
-.t2 { font-size: 36px; }
-.ups { font-size: 36px; }
-
-#start_ups p {
-    font-style: italic;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    transition: bottom 0.4s ease-in-out;
 }
 
-/* Dark Mode */
-.dark-mode {
-    background-color: #121212;
-    color: white;
+/* Show overlay text on hover */
+.portfolio-item:hover .overlay {
+    bottom: 0;
 }
 
-.dark-mode #navbar {
-    background-color: #333;
+/* Video Styling */
+.hover-video {
+    width: 300px; /* Adjust as needed */
+    border-radius: 10px; /* Optional rounded corners */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
-.dark-mode .nav-link {
-    color: #ddd;
+/* Pause video by default */
+.hover-video {
+    pointer-events: none;
 }
 
-/* Dark Mode Button */
-#dark-mode-toggle {
-    position: fixed;
-    top: 20px; 
-    right: 10px; 
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
+/* Play video on hover */
+.hover-video:hover {
+    pointer-events: auto;
+    transform: scale(1.05); /* Optional zoom effect */
+    animation: playVideo 0s steps(1) forwards;
 }
 
-.rb {
-    height: 40px;
-    width: 100px;
-}
-
-.imp {
-    height: 40px;
-    width: 280px;
-}
-
-.pathfind {
-    height: 40px;
-    width: 160px;
-}
-
-#dark-mode-toggle:hover {
-    background-color: #666;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    #navbar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        text-align: center;
-    }
-
-    #main-doc {
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .nav-link {
-        display: inline-block;
-        padding: 10px;
+/* Trick to play on hover */
+@keyframes playVideo {
+    to {
+        play-state: running;
     }
 }
 
 
-/* Awards */
-/* Floating Award Icon */
-.award-widget {
-    position: fixed;
+/* Main Section */
+
+.awards {
+    position: RELATIVE;
     bottom: 20px;
     right: 20px;
+    display: flex; /* Ensures images are side by side */
+    gap: 10px; /* Space between images */
+    align-items: center;
     z-index: 1000;
-    text-align: center;
+    margin: 20px;
 }
 
+/* Award Icons */
 .award-icon {
-    width: 60px;
-    height: 60px;
+    height: auto;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Individual Image Sizes */
+.imeche {
+    width: 150px;
+}
+
+.raeng {
+    width: 150px;
+}
+
+
+/* Hover Effect */
 .award-icon:hover {
     transform: scale(1.1);
 }
 
-/* Awards Popup */
-.awards-popup {
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
-    display: none;
-    text-align: center;
-}
 
-.awards-popup.show {
-    display: block;
-}
-
-/* Awards Grid */
-.awards-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.awards-grid img {
-    width: 100%;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-.awards-grid img:hover {
-    transform: scale(1.1);
-}
 
 /* Glowing Scrollbar */
 ::-webkit-scrollbar {
@@ -254,5 +190,48 @@ header {
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #ff5722, #ff9800);
     box-shadow: 0 0 155px rgba(255, 69, 0, 1); /* Brighter glow on hover */
+}
+
+/* Floating Nav - Default (Bottom on Other Pages) */
+.floating-nav {
+    position: fixed;
+    bottom: 30px; /* Default position */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Individual Links */
+.nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-link:hover {
+    background: linear-gradient(#ff5722, #ff9800);
+    border: 2px solid linear-gradient(#ff5722, #ff9800);
+    color: #fff;
+}
+
+/* Move Floating Nav to Top on Impact, Who, and Understand Pages */
+.impact-page .floating-nav,
+.who-page .floating-nav,
+.understand-page .floating-nav {
+    top: 20px; /* Moves to top */
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
 }
 

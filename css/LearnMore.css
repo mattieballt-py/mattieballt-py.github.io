@@ -1,3 +1,44 @@
+/* Floating Nav - Default (Bottom on Other Pages) */
+.floating-nav {
+    position: fixed;
+    bottom: 30px; /* Default position */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Individual Links */
+.nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+/* Move Floating Nav to Top on Impact, Who, and Understand Pages */
+.impact-page .floating-nav,
+.who-page .floating-nav,
+.understand-page .floating-nav {
+    top: 20px; /* Moves to top */
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 /* Default Dark Mode */
 body {
@@ -59,34 +100,10 @@ header {
 }
 
 .nav-links a:hover {
-    color: #007bff;
+    color: #ff8400;
 }
 
-/* Hero Section */
-.hero {
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-    margin-top: 80px;
-}
 
-.hero h1 {
-    font-size: 48px;
-    max-width: 800px;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 10px;
-}
-
-.motto {
-    font-size: 20px;
-    font-style: italic;
-    color: #bbbbbb;
-    margin-bottom: 30px;
-}
 
 /* --- BUTTONS --- */
 .buttons {
@@ -130,14 +147,14 @@ header {
 
 /* Primary Button */
 .btn.primary {
-    background: #b607fc;
+    background: #fc8e07;
     color: white;
-    border: 2px solid #b607fc;
+    border: 2px solid #fc5507;
     cursor: pointer;
-}
+} 
 
 .btn.primary:hover {
-    background: white;
+    background: #fc6d07;
     color: black;
 }
 
@@ -243,5 +260,142 @@ footer {
 
     .waitlist-form input {
         width: 100%;
+    }
+}
+
+/* AI Newsletter Section */
+.ai-newsletter {
+    text-align: center;
+    background: #f5f5f5;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headline */
+.ai-newsletter h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Description Text */
+.ai-newsletter p:first-of-type {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Input Field */
+.newsletter-form input {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    width: 70%;
+}
+
+/* Submit Button */
+.newsletter-form button {
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff9d00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.newsletter-form button:hover {
+    background-color: #ff9705;
+}
+
+/* Privacy Note */
+.privacy-note {
+    font-size: 16px;
+    color: #090909;
+    margin-top: 10px;
+    font-style: bold;
+}
+
+/* AI Dictionary Section */
+.ai-dictionary {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #070505;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Section Heading */
+.ai-dictionary h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 0
+}
+
+.ai-dictionary p{
+    font-size: 8px;
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+/* Grid Layout for Dictionary */
+.dictionary-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns */
+    gap: 15px;
+    text-align: left;
+}
+
+/* Left Column: AI Terms */
+.term {
+    font-weight: bold;
+    font-size: 18px;
+    color: #222;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Right Column: Definitions */
+.definition {
+    font-size: 16px;
+    color: #444;
+    background: #ffffff;
+    padding: 10px;
+    border-left: 4px solid #ff8400;
+    border-radius: 5px;
+}
+
+/* Mobile Responsive (Stacked View) */
+@media screen and (max-width: 600px) {
+    .dictionary-grid {
+        grid-template-columns: 1fr; /* Stack the items */
+    }
+
+    .term {
+        text-align: center;
+        background: #d9d9d9;
+    }
+
+    .definition {
+        border-left: none;
+        border-top: 4px solid #007bff;
     }
 }
