@@ -241,13 +241,7 @@ footer {
 
 /* --- RESPONSIVE DESIGN --- */
 @media screen and (max-width: 768px) {
-    .hero h1 {
-        font-size: 36px;
-    }
 
-    .motto {
-        font-size: 18px;
-    }
 
     .buttons {
         flex-direction: column;
@@ -351,7 +345,7 @@ footer {
 }
 
 .ai-dictionary p{
-    font-size: 8px;
+    font-size: 10px;
     color: #ffffff;
     margin-bottom: 0px;
 }
