@@ -57,6 +57,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
+    border-radius: 4px;
 }
 
 .topnavbar a:hover {
@@ -66,13 +67,11 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20px;
-    margin-top: 80px;
+    padding: 200px 20px;
 }
 
 .hero h1 {
@@ -81,21 +80,29 @@ body {
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 10px;
+    padding: 0px;
 }
 
 .motto {
     font-size: 20px;
     font-style: italic;
     color: #bbbbbb;
+    margin: 0;
     margin-bottom: 30px;
 }
 
 /* --- BUTTONS --- */
-.buttons {
+.btn {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    padding: 8px 8px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* Form Styling */
@@ -105,8 +112,8 @@ body {
     align-items: center;
 }
 
-.waitlist-form input {
-    padding: 12px;
+input[type="email"] {
+    padding: 8px;
     font-size: 16px;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -119,19 +126,9 @@ body {
     border-color: #007bff;
 }
 
-/* Buttons */
-.btn {
-    padding: 12px 18px;
-    border-radius: 50px;
-    font-size: 16px;
-    text-decoration: none;
-    transition: 0.3s;
-    text-align: center;
-    font-weight: bold;
-}
-
 /* Primary Button */
 .btn.primary {
+    border-radius: 5px;
     background: #b607fc;
     color: white;
     border: 2px solid #b607fc;
@@ -145,12 +142,12 @@ body {
 
 /* Secondary Button */
 .btn.secondary {
-    border: 2px solid #b607fc;
+    border: none;
     color: #b607fc;
 }
 
 .btn.secondary:hover {
-    background: #b607fc;
+    background: #bbbbbb;
     color: white;
 }
 
@@ -246,4 +243,86 @@ footer {
     .waitlist-form input {
         width: 100%;
     }
+}
+
+
+/* Js pop up */
+/* CTA Button */
+.cta-button {
+    background-color: #ff9d00;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #e68900;
+}
+
+/* Popup Modal */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Form Styling */
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popup-content input,
+.popup-content select,
+.popup-content textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.submit-button {
+    background-color: #ff9d00;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+    background-color: #e68900;
 }

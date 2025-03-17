@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integrate AI - AI Business Consultancy</title>
+    <meta name="description" content="Want AI in your business but don’t know where to start? We help businesses integrate AI for automation, chatbots, and customer engagement. Join our AI waitlist today!">
+    <meta name="keywords" content="How to add AI to my business, AI automation, AI chatbot for business, AI for small businesses, AI integration services">
+    <meta name="author" content="Mattie Ball Torokoff">
+    <title>How to Add AI to Your Business – AI Integration Services</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Top Bar -->
     <nav class="topnavbar">
         <div class="logo-container">
             <a href="https://mattieballt-py.github.io"><img class="logo" alt="Integration Symbol Logo of Integrate AI" src="AssetsLogos/IntegrateBlackBG.png"></a>
@@ -19,6 +23,7 @@
         </ul>
     </nav>
 
+        <script src="../js/script.js"></script>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -26,22 +31,94 @@
             <p class="motto">"AI Adjacent"? Become AI Integrated</p>
         </div>
         
-        <!-- Buttons -->
-        <div class="buttons">
-            <form action="#" method="POST" class="waitlist-form">
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <button type="submit" class="btn primary">Join Waitlist</button>
+        <button class="cta-button" onclick="openPopup()">Become AI-Integrated Today</button>
+
+    <!-- Popup Form -->
+    <div id="popup-form" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>AI Integration Request</h2>
+            <form action="submit-form.php" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="business">Your Business Website:</label>
+                <input type="url" id="business" name="business" required>
+
+                <label for="service">Choose AI Service:</label>
+                <select id="service" name="service" onchange="toggleCustomInput()">
+                    <option value="chatbot">AI Chatbot</option>
+                    <option value="recommendations">Custom Product Recommendations</option>
+                    <option value="bookings">AI-Organized Bookings</option>
+                    <option value="custom">Custom AI Solution</option>
+                </select>
+
+                <input type="text" id="custom-service" name="custom-service" placeholder="Describe your custom AI need" style="display: none;">
+
+                <label for="comments">Additional Comments (Optional):</label>
+                <textarea id="comments" name="comments"></textarea>
+
+                <button type="submit" class="submit-button">Submit Request</button>
             </form>
-            <a href="html/who.html" class="btn secondary">Learn More</a>
         </div>
+    </div>
+
     </section>
     <div class="floating-nav">
         <a href="html/Impact.html" class="nav-link">Impact</a>
         <a href="html/who.html" class="nav-link">Who</a>
         <a href="html/LearnMore.html" class="nav-link">Understand</a>
     </div>
-    <section class="valueoffering">
-        <h2> Join businesses growing using AI</h2>
+
+    <!-- AI Services -->
+    <section class="services">
+        <h2>AI Services for Your Business</h2>
+        <p>Cutting-edge AI solutions tailored to your business:</p>
+        <div class="service-box">
+            <h3>AI Chatbot for Your Website</h3>
+            <!-- ref <p>Increase customer engagement by 50% with AI-powered chatbots.</p> -->
+        </div>
+        <div class="service-box">
+            <h3>Personalised AI Product Recommendations</h3>
+            <!-- ref <p>Boost sales with AI-driven recommendations</p> -->
+        </div>
+        <div class="service-box">
+            <h3>AI-Organised Bookings</h3>
+            <p>Custom solutions for your business needs to save time, and reduce losses.</p>
+        </div>
+    </section>
+
+       <!-- Case Study & Stats Section 
+       <section class="case-study">
+        <h2>AI = Higher Profits 📈</h2>
+        <p>See how AI transformed businesses:</p>
+        <img src="profit-chart.jpg" alt="AI Profit Growth Chart">
+        <p>Companies using AI saw a **2x increase** in revenue in 6 months.</p>
+        <a href="#">Download the AI Case Study</a>
+    </section> -->
+    <!-- FAQ & SEO Content -->
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How can AI help my business?</h3>
+            <p>AI automates tasks, increases sales, and improves customer service. We make AI do the boring work, better.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do I need technical skills to use AI in my business?</h3>
+            <p>Nope. Our team handles everything for you.</p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Harness AI for your Business?</h2>
+        <p>Join our AI waitlist today and get AI integrated to your business now.</p>
+        <form action="#" method="POST">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Submit</button>
+        </form>
     </section>
     <footer>
         <p>&copy; 2025 Integrate AI. All rights reserved.</p>
