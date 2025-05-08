@@ -1,14 +1,29 @@
 /* Modern Portfolio Styles */
 :root {
-    --primary-color: #ff5722;
-    --secondary-color: #ff9800;
+    --primary-color: #ff4d00;
+    --secondary-color: #ff6b00;
     --text-color: #ffffff;
     --light-text: #94a3b8;
-    --background: #000000;
-    --section-bg: #111111;
-    --card-bg: #1a1a1a;
+    --background-color: #000000;
+    --section-background: #111111;
+    --card-background: #1a1a1a;
     --transition: all 0.3s ease;
     --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+    --text-color: #ffffff;
+    --background-color: #000000;
+    --card-background: #1a1a1a;
+    --section-background: #111111;
+}
+
+[data-theme="light"] {
+    --text-color: #333333;
+    --background-color: #ffffff;
+    --card-background: #f5f5f5;
+    --section-background: #f0f0f0;
 }
 
 * {
@@ -25,7 +40,8 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: var(--background);
+    background: var(--background-color);
+    overflow-x: hidden;
 }
 
 .container {
@@ -40,40 +56,43 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(15, 23, 42, 0.95);
+    background-color: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(255, 87, 34, 0.1);
+    padding: 1rem 0;
 }
 
 .nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .logo a {
     font-size: 1.5rem;
     font-weight: 700;
-    background: var(--gradient);
+    color: var(--text-color);
+    text-decoration: none;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-decoration: none;
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
 .nav-links a {
-    text-decoration: none;
     color: var(--text-color);
+    text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
 }
@@ -90,7 +109,7 @@ body {
     justify-content: center;
     text-align: center;
     padding: 6rem 2rem;
-    background: linear-gradient(135deg, var(--background) 0%, var(--section-bg) 100%);
+    background: linear-gradient(135deg, var(--background-color) 0%, var(--section-background) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -168,7 +187,7 @@ section {
 }
 
 section:nth-child(even) {
-    background: var(--section-bg);
+    background: var(--section-background);
 }
 
 section::before {
@@ -207,7 +226,7 @@ h2 {
 
 .point {
     padding: 2rem;
-    background: var(--card-bg);
+    background: var(--card-background);
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: var(--transition);
@@ -244,7 +263,7 @@ h2 {
 }
 
 .timeline-content {
-    background: var(--card-bg);
+    background: var(--card-background);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -259,7 +278,7 @@ h2 {
 }
 
 .project-card {
-    background: var(--card-bg);
+    background: var(--card-background);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
